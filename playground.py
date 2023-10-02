@@ -72,7 +72,7 @@ for product in PLAID_PRODUCTS:
 
 # We store the access_token in memory - in production, store it in a secure
 # persistent data store.
-access_token = os.get('SANDBOX_ITEM_TOKEN')
+access_token = os.getenv('SANDBOX_ITEM_TOKEN')
 # The payment_id is only relevant for the UK Payment Initiation product.
 # We store the payment_id in memory - in production, store it in a secure
 # persistent data store.
@@ -82,7 +82,7 @@ payment_id = None
 # persistent data store.
 transfer_id = None
 
-item_id = os.get('SANDBOX_ITEM_ID')
+item_id = os.getenv('SANDBOX_ITEM_ID')
 
 def info():
     global access_token
